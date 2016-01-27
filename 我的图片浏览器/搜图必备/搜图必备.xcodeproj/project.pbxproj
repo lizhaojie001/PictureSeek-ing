@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		454496D71C4C8B1D003F0893 /* CenterCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 454496D61C4C8B1D003F0893 /* CenterCollectionViewController.m */; };
+		456467D51C58C64C00EA0ACF /* customView.m in Sources */ = {isa = PBXBuildFile; fileRef = 456467D41C58C64C00EA0ACF /* customView.m */; };
 		457C2FDB1C55F40A0041DCA8 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 457C2FD91C55F40A0041DCA8 /* CollectionViewCell.m */; };
 		457C2FDC1C55F40A0041DCA8 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 457C2FDA1C55F40A0041DCA8 /* CollectionViewCell.xib */; };
 		457C2FEF1C5607350041DCA8 /* STConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 457C2FE11C5607350041DCA8 /* STConst.m */; };
@@ -17,7 +18,7 @@
 		457C2FF31C5607350041DCA8 /* STIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 457C2FEA1C5607350041DCA8 /* STIndicatorView.m */; };
 		457C2FF41C5607350041DCA8 /* STPhotoBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457C2FEC1C5607350041DCA8 /* STPhotoBrowserController.m */; };
 		457C2FF51C5607350041DCA8 /* STPhotoBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 457C2FEE1C5607350041DCA8 /* STPhotoBrowserView.m */; };
-		457C2FF71C560F6E0041DCA8 /* 08359.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 457C2FF61C560F6E0041DCA8 /* 08359.jpg */; };
+		457C2FF71C560F6E0041DCA8 /* 08359.png in Resources */ = {isa = PBXBuildFile; fileRef = 457C2FF61C560F6E0041DCA8 /* 08359.png */; };
 		457C2FFB1C5618250041DCA8 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 457C2FFA1C5618250041DCA8 /* Picture.m */; };
 		457C2FFF1C561D9C0041DCA8 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 457C2FFE1C561D9C0041DCA8 /* DataManager.m */; };
 		459F5AEE1C4C7F2600F8FE32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 459F5AED1C4C7F2600F8FE32 /* main.m */; };
@@ -44,6 +45,8 @@
 		410E75F346C8067339294C56 /* Pods-搜图必备.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-搜图必备.release.xcconfig"; path = "Pods/Target Support Files/Pods-搜图必备/Pods-搜图必备.release.xcconfig"; sourceTree = "<group>"; };
 		454496D51C4C8B1D003F0893 /* CenterCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterCollectionViewController.h; sourceTree = "<group>"; };
 		454496D61C4C8B1D003F0893 /* CenterCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterCollectionViewController.m; sourceTree = "<group>"; };
+		456467D31C58C64C00EA0ACF /* customView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customView.h; sourceTree = "<group>"; };
+		456467D41C58C64C00EA0ACF /* customView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customView.m; sourceTree = "<group>"; };
 		457C2FD81C55F40A0041DCA8 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		457C2FD91C55F40A0041DCA8 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		457C2FDA1C55F40A0041DCA8 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
@@ -62,7 +65,7 @@
 		457C2FEC1C5607350041DCA8 /* STPhotoBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPhotoBrowserController.m; sourceTree = "<group>"; };
 		457C2FED1C5607350041DCA8 /* STPhotoBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPhotoBrowserView.h; sourceTree = "<group>"; };
 		457C2FEE1C5607350041DCA8 /* STPhotoBrowserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPhotoBrowserView.m; sourceTree = "<group>"; };
-		457C2FF61C560F6E0041DCA8 /* 08359.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 08359.jpg; sourceTree = "<group>"; };
+		457C2FF61C560F6E0041DCA8 /* 08359.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 08359.png; sourceTree = "<group>"; };
 		457C2FF91C5618250041DCA8 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
 		457C2FFA1C5618250041DCA8 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
 		457C2FFD1C561D9C0041DCA8 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				457C2FD81C55F40A0041DCA8 /* CollectionViewCell.h */,
 				457C2FD91C55F40A0041DCA8 /* CollectionViewCell.m */,
 				457C2FDA1C55F40A0041DCA8 /* CollectionViewCell.xib */,
+				456467D31C58C64C00EA0ACF /* customView.h */,
+				456467D41C58C64C00EA0ACF /* customView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,7 +219,7 @@
 				459F5AF81C4C7F2600F8FE32 /* Assets.xcassets */,
 				459F5AFA1C4C7F2600F8FE32 /* LaunchScreen.storyboard */,
 				459F5AFD1C4C7F2600F8FE32 /* Info.plist */,
-				457C2FF61C560F6E0041DCA8 /* 08359.jpg */,
+				457C2FF61C560F6E0041DCA8 /* 08359.png */,
 				459F5AEC1C4C7F2600F8FE32 /* Supporting Files */,
 			);
 			path = "搜图必备";
@@ -348,7 +353,7 @@
 				459F5B2E1C4C846400F8FE32 /* libReveal.dylib in Resources */,
 				459F5AFC1C4C7F2600F8FE32 /* LaunchScreen.storyboard in Resources */,
 				459F5AF91C4C7F2600F8FE32 /* Assets.xcassets in Resources */,
-				457C2FF71C560F6E0041DCA8 /* 08359.jpg in Resources */,
+				457C2FF71C560F6E0041DCA8 /* 08359.png in Resources */,
 				459F5AF71C4C7F2600F8FE32 /* Main.storyboard in Resources */,
 				457C2FDC1C55F40A0041DCA8 /* CollectionViewCell.xib in Resources */,
 			);
@@ -422,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				456467D51C58C64C00EA0ACF /* customView.m in Sources */,
 				457C2FEF1C5607350041DCA8 /* STConst.m in Sources */,
 				457C2FF41C5607350041DCA8 /* STPhotoBrowserController.m in Sources */,
 				457C2FF31C5607350041DCA8 /* STIndicatorView.m in Sources */,

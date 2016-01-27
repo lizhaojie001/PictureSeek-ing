@@ -10,8 +10,9 @@
 #import "CollectionViewCell.h"
 #import "STPhotoBrowserController.h"
 #import "STConfig.h"
-@interface CenterCollectionViewController ()<STPhotoBrowserDelegate>
-
+#import "customView.h"
+@interface CenterCollectionViewController ()<STPhotoBrowserDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
+@property (nonatomic,strong) UICollectionView *collectionView;
 @end
 
 @implementation CenterCollectionViewController
@@ -27,38 +28,32 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
+    self.title = self.str;
     self.collectionView.backgroundColor = [UIColor whiteColor];
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Register cell classes
    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"CELL"];
-    //self.collectionView.layoutMargins = UIEdgeInsetsMake(5, 5, 5, 5);
-     // Do any additional setup after loading the view.
+    
     [self.collectionView registerNib:[UINib nibWithNibName:@"CollectionViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
+    [self setupNaviItem];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupNaviItem {
+    UIBarButtonItem *rightItem= [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:nil];
+    self.navigationItem.rightBarButtonItem = rightItem ;
+    customView *view=    [[customView alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
+    view.backgroundColor = [UIColor clearColor];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:view];
+    
+ 
+    
+    self.navigationItem.leftBarButtonItem = leftItem;
+   
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 #pragma  mark - photoBrower代理方法
 - (UIImage*)photoBrowser:(STPhotoBrowserController *)browser placeholderImageForIndex:(NSInteger)index {
-    return [UIImage imageNamed:@"08359.jpg"];
+    return [UIImage imageNamed:@"08359.png"];
 }
 - (NSURL*)photoBrowser:(STPhotoBrowserController *)browser highQualityImageURLForIndex:(NSInteger)index {
-    NSURL *url  = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"08359" ofType:@"jpg"]];
+    NSURL *url  = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"08359" ofType:@"png"]];
     return url ;
 }
 #pragma  mark - event Response 事件相应
@@ -149,4 +144,23 @@ static NSString * const reuseIdentifier = @"Cell";
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout  minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return 5;
 }
+#pragma  mark - 懒加载
+- (NSString *) str {
+    if(_str == nil) {
+        _str = @"鲜花";
+    }
+    return _str;
+}
+- (UICollectionView *)collectionView {
+	if(_collectionView == nil) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+        
+		_collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+        [self.view addSubview:_collectionView];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+	}
+	return _collectionView;
+}
+
 @end

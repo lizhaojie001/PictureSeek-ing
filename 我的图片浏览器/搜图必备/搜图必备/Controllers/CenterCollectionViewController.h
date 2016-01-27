@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CenterCollectionViewController : UICollectionViewController
+@interface CenterCollectionViewController : UIViewController
 @property (nonatomic,copy) NSString * str;
+
+
 @end

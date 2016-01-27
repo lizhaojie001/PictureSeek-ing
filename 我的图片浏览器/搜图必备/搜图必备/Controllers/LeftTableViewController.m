@@ -48,12 +48,12 @@ static NSString *identifier = @"Cell";
 }
  
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CenterCollectionViewController * o= [[CenterCollectionViewController alloc]init];
+    UINavigationController *mainNavi = [[UINavigationController alloc]initWithRootViewController:o];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
-    __block CenterCollectionViewController * o= [[CenterCollectionViewController alloc]init];;
-    [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
-        finished = YES;
-        o.str = @"123";
-    }];
+                             o.str =cell.textLabel.text;
+    [self.mm_drawerController setCenterViewController:mainNavi withCloseAnimation:YES completion:nil];
 }
 /*
 // Override to support conditional editing of the table view.

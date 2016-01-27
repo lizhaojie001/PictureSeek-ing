@@ -49,15 +49,12 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    UINavigationController * leftNavi = [[UINavigationController alloc]initWithRootViewController:[[LeftTableViewController alloc] init]];
-    UICollectionViewFlowLayout * layout =  [[UICollectionViewFlowLayout alloc] init];
-    [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
-   // layout.minimumLineSpacing = 1.0f;
-    //layout.minimumInteritemSpacing = 5.0f;
+    UINavigationController * leftNavi = [[UINavigationController alloc]initWithRootViewController:[[LeftTableViewController alloc]init]];
+   
     
  
-    UINavigationController * mainNavi =  [[UINavigationController alloc]initWithRootViewController:[[CenterCollectionViewController alloc] initWithCollectionViewLayout:layout]];
-//mainNavi.view.backgroundColor = [UIColor whiteColor];
+    UINavigationController * mainNavi = [[UINavigationController alloc]initWithRootViewController:[[CenterCollectionViewController alloc]init]] ;
+ 
     self.drawer= [[MMDrawerController alloc] initWithCenterViewController:mainNavi leftDrawerViewController:leftNavi];
     
    //self.drawer.view.backgroundColor = [UIColor whiteColor];
